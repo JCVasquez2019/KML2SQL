@@ -196,7 +196,7 @@ namespace Kml2Sql.Mapping
 
         public static string GetVectorSql(Vector coordinate)
         {
-            return $"{coordinate.Longitude} {coordinate.Latitude}";
+             return  $"{coordinate.Longitude.ToString(CultureInfo.InvariantCulture)} {coordinate.Latitude.ToString(CultureInfo.InvariantCulture)}";
         }
 
         private static bool RingInvalid(Vector[] coordinates)
